@@ -1,4 +1,6 @@
 from django.db import models
+
+from . managers import ActiveLinkManager
 from . import utils
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -31,4 +33,7 @@ class Link(models.Model):
         # Complete the save operation 
     def save(self,*args, **kwargs):  
         super().save(*args, **kwargs)
-        pass  
+        pass 
+objects = models.Manager()
+
+public = ActiveLinkManager() 
