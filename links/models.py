@@ -4,8 +4,7 @@ from . managers import ActiveLinkManager
 from . import utils
 from django.contrib.auth import get_user_model
 User = get_user_model()
-
-# Create your models here 
+ 
 
 class Link(models.Model):
     # Add the fields here
